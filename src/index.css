@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  font-family: 'Playwrite NO', cursive;
+}
