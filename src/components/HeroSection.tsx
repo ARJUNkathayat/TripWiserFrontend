@@ -72,7 +72,13 @@ const HeroSection = () => {
           </div>
         </div>
 
-     
+        {/* Right Side Image */}
+        <div className="relative hidden lg:flex justify-center items-center">
+          <img
+            src="https://as2.ftcdn.net/v2/jpg/04/08/25/05/1000_F_408250543_MVaEVGeWxb4FiFy7mEGKj8nfYkwoAZON.jpg"
+            alt="travel"
+            className="w-[90%] h-[700px] object-cover rounded-[40px] shadow-2xl"
+          />
 
           {/* Floating Card 1 */}
           <div className="absolute top-12 left-0 bg-white/90 backdrop-blur-md p-5 rounded-3xl shadow-xl w-72">
