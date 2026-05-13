@@ -7,7 +7,7 @@ import React from 'react'
 const LandingPage = () => {
   return (
     <div>
-        <NavbarDemo/>
+        <NavbarDemo />
         <HeroSection/>
         <HowItWorks/>
         
