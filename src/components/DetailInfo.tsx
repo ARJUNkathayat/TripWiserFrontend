@@ -4,6 +4,8 @@ import NavbarDemo from './resizable-navbar-demo'
 import uk1st from '@/assets/uk1st.png'
 import uk2nd from "@/assets/uk2nd.png"
 import uk3rd from "@/assets/uk3rd.png"
+import { thingsToDo } from '@/assets/thingstodo'
+import { Cards } from './ui/Cards'
 
 const DetailInfo = () => {
   return (
@@ -67,13 +69,29 @@ const DetailInfo = () => {
           <div className='space-y-6'>
             <h2 className='font-bold text-3xl tracking-tight text-slate-100'>Top Places</h2>
             
-            <div className='overflow-x-auto flex gap-6 pb-6 scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-transparent mask-image-linear'>
-              {[...Array(7)].map((_, i) => (
-                <div key={i} className='shrink-0 transition-transform duration-300 hover:-translate-y-2'>
-                  <CometCard width={300} imageHeight='14rem' />
-                </div>
-              ))}
-            </div>
+           <div className="overflow-hidden relative w-full">
+  <div className="flex gap-6 w-max animate-scroll">
+    
+    {[...thingsToDo, ...thingsToDo].map((data, i) => (
+      <div
+        key={i}
+        className="shrink-0 transition-transform duration-300 hover:-translate-y-2"
+      >
+        <Cards
+          imageHeight="14rem"
+          width={300}
+          rank={data.rank}
+          attraction_name={data.attraction_name}
+          attraction_image_url={data.attraction_image_url}
+          rating={data.rating}
+          category={data.category}
+          review_count={data.review_count}
+        />
+      </div>
+    ))}
+
+  </div>
+</div>
           </div>
 
         </div>
